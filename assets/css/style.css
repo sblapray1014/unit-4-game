@@ -1,53 +1,53 @@
 body {
-margin: 0;
-background-image: url("../../assets/images/funky-lines.png");
-}
-
-#firstPart {
-color: #4aaaa5;
-font-size: 40px;
-margin-top: 10px;
-font-weight: bold;
-}
-
-#secondPart {
-color: #44aaa5;
-font-size: 15px;
-margin-top: 20px;
-font-weight: bold;
-line-height: 18px;
-}
-
-#random-number {
-color: #44aaa5;
-font-size: 15px;
-margin-top: 25px;
-font-weight: bold;
-}
-
-#win-count {
-color: #44aaa5;
-font-size: 15px;
-margin-top: 15px;
-font-weight: bold;
-}
-
-
-#loss-count {
-color: #44aaa5;
-font-size: 15px;
-margin-top: 15px;
-font-weight: bold;
-}
-
-#current-score {
-color: #44aaa5;
-font-size: 15px;
-margin-top: 15px;
-font-weight: bold;
-}
-
-.jazz-image {
-width: 200px;
-height: 200px;
-}
+    margin: 0;
+    background-image: url("../../assets/images/funky-lines.png");
+    }
+    
+    #firstPart {
+    color: #4aaaa5;
+    font-size: 40px;
+    margin-top: 10px;
+    font-weight: bold;
+    }
+    
+    #secondPart {
+    color: #44aaa5;
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    line-height: 18px;
+    }
+    
+    #random-number {
+    color: #44aaa5;
+    font-size: 15px;
+    margin-top: 25px;
+    font-weight: bold;
+    }
+    
+    #win-count {
+    color: #44aaa5;
+    font-size: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    }
+    
+    
+    #loss-count {
+    color: #44aaa5;
+    font-size: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    }
+    
+    #current-score {
+    color: #44aaa5;
+    font-size: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    }
+    
+    .jazz-image {
+    width: 275px;
+    height: 180px;
+    }

@@ -1,40 +1,53 @@
-
-
-var targetNumber = Math.floor(Math.random() * 55) + 22;
-var winCount = 0;
-var lossCount = 0;
-var numberOptions = [10, 12, 5, 7];
+var targetNumber = [];
+var winCount = [];
+var lossCount = [];
+var numberOptions = [];
 var counter = 0;
 var jazz = $("#jazz");
+var images = ["assets/images/Donovan1.jpg", "assets/images/Joe1.jpg", "assets/images/Ricky1.jpg", "assets/images/Rudy1.jpg"];
 console.log(numberOptions)
 
+
+function reset() {
+targetNumber = Math.floor(Math.random() * 55) + 22;  
+$("#random-number").text("Random Number: " + targetNumber);
+numberOptions = [Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1)];
+$("#current-score").text("Current Score: " + (counter = 0));
+console.log(counter);
+} 
+targetNumber = Math.floor(Math.random() * 55) + 22;  
 $("#random-number").append(" " + targetNumber);
-
-$("#win-count").append(" " + winCount);
-
-$("#loss-count").append(" " + lossCount);
-
+numberOptions = [Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1)];
+counter = 0;
 
 
 for (var i = 0; i < numberOptions.length; i++) {
     var imageJazz = $("<img>");
-    imageJazz.addClass(".jazz-image");
-    imageJazz.attr("src", "assets/images/Donovan1.jpg", "assets/images/Joe1.jpg", "assets/images/Ricky1.jpg", "assets/images/Rudy1");
+    imageJazz.addClass("jazz-image"); // EDITED THIS LINE
+    imageJazz.attr("src", images[i]); // EDITED THIS LINE
     imageJazz.attr("data-jazzvalue", numberOptions[i]);
     jazz.append(imageJazz);
 }
 
-jazz.on("click", ".jazz-image", function () {
+$("#jazz").on("click", ".jazz-image", function () {
     var jazzValue = ($(this).attr("data-jazzvalue"));
     jazzValue = parseInt(jazzValue);
     counter += jazzValue;
-    alert("New Score:" + counter);
+    $("#current-score").text("Current Score: " + counter);
+    function ifElse() {
     if (counter === targetNumber) {
         winCount++;
-    }
-
-    else if (counter >= targetNumber) {
+        $("#win-count").text("Win Count: " + winCount);
+        alert("#TakeNote");
+        reset();
+    } else if (counter > targetNumber) {
         lossCount++;
+        $("#loss-count").text("Loss Count:" + lossCount);
+        alert("What a loser!");
+        reset();
     }
-
+}
+ifElse();
 });
+
+
