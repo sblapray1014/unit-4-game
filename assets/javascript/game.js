@@ -42,7 +42,7 @@ $("#jazz").on("click", ".jazz-image", function () {
         reset();
     } else if (counter > targetNumber) {
         lossCount++;
-        $("#loss-count").text("Loss Count:" + lossCount);
+        $("#loss-count").text("Loss Count: " + lossCount);
         alert("What a loser!");
         reset();
     }
